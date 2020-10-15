@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { CssBaseline, Paper, Typography } from "@material-ui/core";
 import Title from "./Title";
+import Task from "./Task";
 
 const StyledDiv = styled.div`
   & {
@@ -17,6 +18,9 @@ export default function List() {
     <div>
       <StyledDiv>
         <Title></Title>
+        <Task></Task>
+        <Task></Task>
+        <Task></Task>
       </StyledDiv>
     </div>
   );

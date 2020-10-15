@@ -34,6 +34,7 @@ export default function Title() {
       {open ? (
         <div>
           <InputBase
+            autofocus
             value="Todo"
             inputProps={{ StyledInput }}
             fullWidth
