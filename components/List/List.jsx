@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { CssBaseline, Paper, Typography } from "@material-ui/core";
 import Title from "./Title";
 import Task from "./Task";
+import InputContainer from "../Input/InputContainer";
 
 const StyledDiv = styled.div`
   & {
@@ -21,6 +22,7 @@ export default function List() {
         <Task></Task>
         <Task></Task>
         <Task></Task>
+        <InputContainer></InputContainer>
       </StyledDiv>
     </div>
   );
