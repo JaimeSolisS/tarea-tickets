@@ -22,7 +22,7 @@ export default function List({ list }) {
         {list.tasks.map((task) => (
           <Task key={task.id} task={task}></Task>
         ))}
-        <InputContainer listId={list.id}></InputContainer>
+        <InputContainer listId={list.id} type="task"></InputContainer>
       </StyledDiv>
     </div>
   );

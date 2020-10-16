@@ -32,8 +32,18 @@ const data = {
       title: "Todo",
       tasks,
     },
+    "list-2": {
+      id: "list-2",
+      title: "In progress",
+      tasks,
+    },
+    "list-3": {
+      id: "list-3",
+      title: "Done",
+      tasks,
+    },
   },
-  listIds: ["list-1"],
+  listIds: ["list-1", "list-2", "list-3"],
 };
 
 export default data;

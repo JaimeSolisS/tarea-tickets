@@ -27,22 +27,28 @@ const StyledButton = styled.button`
     }
   }
 `;
-export default function InputTask({ setOpen, listId }) {
+export default function InputTask({ setOpen, listId, type }) {
   const classes = useStyle();
   const handleOnChange = (e) => {
-    setTaskTitle(e.target.value);
+    setTitle(e.target.value);
   };
-  const [taskTitle, setTaskTitle] = useState("");
+  const [title, setTitle] = useState("");
   const handleBtn = () => {
-    addMoreTask(taskTitle.listId);
-    setTaskTitle("");
-    setOpen(false);
+    if (type === "task") {
+      addMoreTask(title.listId);
+      setTitle("");
+      setOpen(false);
+    } else {
+      addMoreTask(title);
+      setTitle("");
+      setOpen(false);
+    }
   };
-  const { addMoreTask } = useContext(storeApi);
+  const { addMoreTask, addMoreList } = useContext(storeApi);
 
   const handleBlur = () => {
     setOpen(false);
-    setTaskTitle("");
+    //setTaskTitle("");
   };
 
   return (
@@ -52,18 +58,25 @@ export default function InputTask({ setOpen, listId }) {
           <InputBase
             onChange={handleOnChange}
             multiline
-            onBlur={handleBlur}
+            onBlur={() => setOpen(false)}
             fullWidth
             inputProps={{
               className: classes.input,
             }}
-            value={taskTitle}
-            placeholder="Enter a name of this task"
+            value={title}
+            placeholder={
+              type === "task"
+                ? "Enter a title of this task"
+                : "Enter list Title"
+            }
           />
         </Paper>
       </div>
       <div>
-        <StyledButton onClick={handleBtn}> Add Task </StyledButton>
+        <StyledButton onClick={handleBtn}>
+          {" "}
+          {type === "task" ? "add Task" : "add List"}{" "}
+        </StyledButton>
         <IconButton onClick={() => setOpen(false)}>
           <ClearIcon />
         </IconButton>
