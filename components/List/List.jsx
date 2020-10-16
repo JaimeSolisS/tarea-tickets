@@ -14,14 +14,14 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default function List() {
+export default function List({ list }) {
   return (
     <div>
       <StyledDiv>
-        <Title></Title>
-        <Task></Task>
-        <Task></Task>
-        <Task></Task>
+        <Title title={list.title}></Title>
+        {list.cards.map((task) => (
+          <Task key={task.id} task={task}></Task>
+        ))}
         <InputContainer></InputContainer>
       </StyledDiv>
     </div>

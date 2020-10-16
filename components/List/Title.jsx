@@ -26,7 +26,7 @@ const StyledInput = styled.input`
     }
 `;
 
-export default function Title() {
+export default function Title({ title }) {
   const [open, setOpen] = useState(false);
   const classes = useStyle();
   return (
@@ -35,7 +35,7 @@ export default function Title() {
         <div>
           <InputBase
             autofocus
-            value="Todo"
+            value={title}
             inputProps={{ StyledInput }}
             fullWidth
             onBlur={() => setOpen(!open)}
@@ -47,7 +47,7 @@ export default function Title() {
             onClick={() => setOpen(!open)}
             className={classes.editableTitle}
           >
-            Todo
+            {title}
           </Typography>
           <MoreHorizIcon />
         </StyledEditableContainer>

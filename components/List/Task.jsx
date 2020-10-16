@@ -10,12 +10,12 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-export default function Task() {
+export default function Task({ task }) {
   const classes = useStyle();
 
   return (
     <div>
-      <Paper className={classes.task}>First Task</Paper>
+      <Paper className={classes.task}>{task.title}</Paper>
     </div>
   );
 }
