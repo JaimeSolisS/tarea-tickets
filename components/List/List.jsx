@@ -19,10 +19,10 @@ export default function List({ list }) {
     <div>
       <StyledDiv>
         <Title title={list.title}></Title>
-        {list.cards.map((task) => (
+        {list.tasks.map((task) => (
           <Task key={task.id} task={task}></Task>
         ))}
-        <InputContainer></InputContainer>
+        <InputContainer listId={list.id}></InputContainer>
       </StyledDiv>
     </div>
   );

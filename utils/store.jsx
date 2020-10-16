@@ -1,4 +1,4 @@
-const cards = [
+const tasks = [
   {
     id: "task-1",
     title: "Task 1",
@@ -30,7 +30,7 @@ const data = {
     "list-1": {
       id: "list-1",
       title: "Todo",
-      cards,
+      tasks,
     },
   },
   listIds: ["list-1"],
