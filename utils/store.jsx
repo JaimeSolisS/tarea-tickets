@@ -2,7 +2,8 @@ const tasks = [
   {
     id: "task-1",
     title: "Task 1",
-    requester: "A",
+    description: "Description of task 1",
+    requester: "John Doe",
     assingee: "None",
     date: "15/10/2020",
     status: "open",
@@ -10,7 +11,8 @@ const tasks = [
   {
     id: "task-2",
     title: "Task 2",
-    requester: "A",
+    description: "Description of task 2",
+    requester: "Victor Wayne",
     assingee: "None",
     date: "15/10/2020",
     status: "open",
@@ -18,7 +20,8 @@ const tasks = [
   {
     id: "task-3",
     title: "Task 3",
-    requester: "A",
+    description: "Description of task 3",
+    requester: "Jane Doe",
     assingee: "None",
     date: "15/10/2020",
     status: "open",

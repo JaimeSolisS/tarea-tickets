@@ -61,7 +61,7 @@ export default function Home() {
 
           return <List list={list} key={listId} />;
         })}
-        <InputContainer type="list"></InputContainer>
+        <InputContainer type="list"> </InputContainer>
       </div>
     </storeApi.Provider>
   );

@@ -33,7 +33,7 @@ export default function InputContainer({ listId, type }) {
           onClick={() => setOpen(!open)}
         >
           <Typography>
-            {type === "task" ? "+ Add a Card" : "+ Add another List"}
+            {type === "task" ? "+ Add a Task" : "+ Add another List"}
           </Typography>
         </Paper>
       </Collapse>
